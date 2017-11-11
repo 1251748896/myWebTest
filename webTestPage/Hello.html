@@ -1,0 +1,142 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<script type="text/javascript" src="js/Form.js"></script>
+		<script type="text/javascript" src="js/ArrayTest.js"></script>
+		<script type="text/javascript" src="js/DataType.js"></script>
+		<script type="text/javascript" src="js/ReCodeFatherMethod.js"></script>
+		<script type="text/javascript" src="js/Eventsss.js"></script>
+		
+		
+		<script type="text/javascript">
+		
+		
+		
+		
+		
+		
+		
+		//函数的重载 类似于 重写父类的方法。
+		//在js当中，形参的数目可以和实参不相同.
+//		test(1,3);
+		
+		//需要通过两个点来实现函数的重载 1.参数的类型  2.参数的个数
+		
+		
+		function sayHello () {
+			var args = arguments;
+			
+			if(args.length == 1 && typeof args[0] == "string") {
+				alert("执行一个参数 == 参数类型为 string的方法");
+				
+				
+				
+				
+			} else if (args.length == 1 && typeof args[0] == "number") {
+				alert("执行1个参数 == 参数类型是 number 的方法");
+			}  else if (args.length == 2) {
+				alert("执行2个参数");
+			} else {
+				alert("暂时没有对应的方法")
+			}
+			
+		}
+		
+//		sayHello(1,2);
+		
+		
+		
+//		sum(2,12);
+		
+		
+//		test();
+		
+//		varType();
+
+//      testType();
+		
+		//
+//		 arrayTestFunction();
+
+
+
+
+
+		
+		
+		</script>
+		
+		
+		
+	</head>
+	<body onload="alert('页面加载完成')"> 
+		
+		<h1>js的单击事件</h1>
+		<hr />
+		<input type="button" name="姜波" id="" value="第一个单击事件" onclick="nihao()" />
+		
+		<h2>js鼠标的事件</h2>
+		
+		<div style="border: solid 1px ; width: 100px; height: 60px;" onmouseout="alert('我出去了')">
+			
+		</div>
+		
+		<h2>js当中键盘的事件</h2>
+		
+		<input type="" name="" id="" value="onkeyup" onkeyup="alert('我弹起来了')" />
+		<input type="" name="" id="" value="onkeydown" onkeypress="alert('w an xia qu le')"/>
+		
+		<h2>js页面的事件</h2>
+		
+		<h2>js表单的事件</h2>
+		
+		<input type="" name="" id="" value="focus" onfocus="alert('我获取到了焦点')" />
+		<input type="" name="" id="" value="diushi" onblur="alert('我丢失了焦点')" />
+		
+		<select name="筛选框" onchange="alert('选中的值发生了改变')">
+			<option value="1">北京比较冷</option>
+			<option value="1">成都比较温和</option>
+		</select>
+		
+		<h2>js业务逻辑的在ajks的时候在讲</h2>
+		
+		
+		<h1 style="color: red;">js事件对象</h1>
+		
+		<h2>获取鼠标的坐标</h2>
+		
+		<div id="showDiv" onmousemove="showMove()" style="height: 300px; width: 500px; border: solid 5px;">
+		</div>
+		
+		<h2>获取键盘的事件对象</h2>
+		<input type="text" name="" id="" value="" onkeyup="showKey()" />
+		
+		
+		
+		
+		<h1 style="color: purple; font: 'bodoni mt';">事件的:冒泡,捕获和终止</h1>
+		
+		
+		<h3>你好</h3>
+		
+		
+		
+		
+		
+		
+		
+		<input type="button" name="" id="" value="测试按钮" onclick="sayHello();" />
+		
+		
+		
+	</body>
+	
+	
+	
+	
+	
+	
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="myEChartFiles/echarts.min.js"></script>
+		
+		
+	</head>
+	<body>
+		
+		<div id="firstForm" style="width: 100%;height:220px;color: red;"></div>
+		
+		<script type="text/javascript">
+		//创建第二个表格
+		var ringChart = echarts.init(document.getElementById("firstForm"));
+		
+		var option = {
+			title: {
+				text: '设备在线率',
+				//subtext: '副标题',
+				x: 'center',
+			},
+			
+			tooltip: {},
+			
+			legend: {
+				 //data: ['在线数量', '离线数量'], //标题注释
+				 //x: 'left',  //注释位置
+			},
+			
+			series: [
+			{
+				name: '设备在线率',
+				type: 'pie',
+				data: [{value:15, name:'在线数量'},{value:50, name:'离线数量'}],
+			}
+			]
+			
+		};
+		
+		ringChart.setOption(option);
+		
+		document.write("在线设备:")
+		
+	</script>
+	
+	
+	
+	<div id="onlineLabel" style="width: 100px;height: 30px;color: red;">
+		
+	</div>
+	
+		
+	</body>
+</html>

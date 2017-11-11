@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		
+		
+		<title></title>
+	</head>
+	<body>
+		<p><input type="text" id="text1" value="nnnnnnnnnn"/></p>  
+        <p><input type="text" id="text2" value="pppppppppp"/></p>
+		
+		<input type="text" name="haha" id="haha" value="拉一个" style="width: 300px;height: 50px;position: absolute;top: 100px;left: 200px;font-size:50px ;"/>
+		
+		
+		<input type="button" name="我是按钮" id="我是按钮" value="点击事件" onclick="nihao()" style="width: 300px;height: 100px;position: absolute;top: 200px;left: 200px;font-size: 50px;"/>
+		
+		
+		<input type="button" name="我是按钮" id="我是按钮" value="调用oc控制器中的方法" onclick="runOcMethod('getParams: psw:');" style="width: 300px;height: 100px;position: absolute;top: 350px;left: 200px;font-size: 50px;"/>
+		
+		<script type="text/javascript">
+			
+			function nihao (iphoneNum, psw) {
+				alert("调用了哈,收到了oc传递的参数:"+iphoneNum+"psw:"+psw);
+				return "我被oc调用了";
+			}
+			
+			function runOcMethod (methodName) {
+				var name = document.getElementById("text1").value;
+				var psw = document.getElementById("text2").value;
+				document.write(Date());
+				window.location.href = "objc://"+methodName+":/"+name+":/"+psw;
+				
+				//alert("name:"+name+"psw:"+psw);
+				
+			}
+			
+		</script>
+		
+	</body>
+</html>
